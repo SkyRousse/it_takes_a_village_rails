@@ -92,7 +92,7 @@
         1,
         null,
         1,
-        5,
+        14,
         null,
         null,
         1,
@@ -580,11 +580,15 @@
       "/Users/Guest/Desktop/it_takes_a_village/config/routes.rb": [
         1,
         1,
-        null,
         1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/Guest/Desktop/it_takes_a_village/app/models/user.rb": [
+        1,
+        1,
         1,
         null,
         null,
@@ -607,13 +611,17 @@
         1,
         null,
         1,
-        12,
-        13,
-        10,
+        17,
+        19,
+        17,
         null,
         null
       ],
       "/Users/Guest/Desktop/it_takes_a_village/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/it_takes_a_village/app/helpers/users_helper.rb": [
         1,
         null
       ],
@@ -630,6 +638,16 @@
         null
       ],
       "/Users/Guest/Desktop/it_takes_a_village/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/it_takes_a_village/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
         1,
         1,
         null,
@@ -701,14 +719,73 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/it_takes_a_village/spec/features/show_user_pages_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/it_takes_a_village/spec/features/update_users_pages_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/it_takes_a_village/spec/models/user_spec.rb": [
         1,
         null,
         1,
         1,
+        8,
+        null,
+        2,
         null
       ]
     },
-    "timestamp": 1474063240
+    "timestamp": 1474067138
   }
 }
