@@ -92,7 +92,7 @@
         1,
         null,
         1,
-        14,
+        19,
         null,
         null,
         1,
@@ -582,7 +582,7 @@
         1,
         1,
         1,
-        null,
+        1,
         null,
         null
       ],
@@ -595,6 +595,7 @@
         1,
         null,
         null,
+        1,
         null
       ],
       "/Users/Guest/Desktop/it_takes_a_village/app/models/application_record.rb": [
@@ -662,6 +663,23 @@
         1,
         1,
         1,
+        null
+      ],
+      "/Users/Guest/Desktop/it_takes_a_village/app/models/pet.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/it_takes_a_village/spec/factories/pets.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/Guest/Desktop/it_takes_a_village/spec/factories/users.rb": [
@@ -775,6 +793,16 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/it_takes_a_village/spec/models/pet_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        6,
+        null,
+        2,
+        null
+      ],
       "/Users/Guest/Desktop/it_takes_a_village/spec/models/user_spec.rb": [
         1,
         null,
@@ -783,9 +811,10 @@
         8,
         null,
         2,
+        2,
         null
       ]
     },
-    "timestamp": 1474067138
+    "timestamp": 1474070670
   }
 }
