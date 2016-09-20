@@ -5,3 +5,7 @@ Rails.application.routes.draw do
   resources :pets
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+
+
+# Use code below to tell Devise to use custom controllers in order to make ajax requests
+# devise_for :users, :controllers => {sessions: 'sessions', registrations: 'registrations'} 

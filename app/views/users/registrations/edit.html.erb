@@ -1,11 +1,15 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {  multipart: true }) do |f| %>
+<%= form_for(resource, as: resource_name, remote: true, url: registration_path(resource_name), html: {  multipart: true }) do |f| %>
   <%= devise_error_messages! %>
 
   <!-- the following fields are not part of the sign_up form -->
 
-  <div class="field">
+  <div class="form_group">
+    <% if f.object.avatar? %>
+      <%= image_tag @user.avatar.url(:thumb) %>
+    <% end %>
+    <label for="avatar">Profile Pic</label>
     <%= f.file_field :avatar %>
   </div>
 
