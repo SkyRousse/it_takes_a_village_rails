@@ -30,6 +30,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'chartkick', '~> 2.1', '>= 2.1.1'
+gem "highcharts-rails"
 gem 'groupdate', '~> 3.0', '>= 3.0.2'
 gem 'ffaker', :git => 'https://github.com/ffaker/ffaker.git'
 gem 'will_paginate'

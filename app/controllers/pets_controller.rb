@@ -62,7 +62,7 @@ class PetsController < ApplicationController
   private
 
   def sort_column
-    Pet.column_names.include?(params[:sort]) ? params[:sort] : "time_consumed"
+    Pet.column_names.include?(params[:sort]) ? params[:sort] : "species"
   end
 
   def sort_direction
