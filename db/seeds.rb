@@ -19,6 +19,7 @@ zip_code_array = ["97202", "97206", "97219", "97124", '97202', '97206', '97219']
               email:FFaker::Internet.email,
               password:123456,
               zip_code:zip_code_array.sample,
+              street_address:FFaker::AddressUS.street_address,
               dob:FFaker::Time.between(18.years.ago, 90.years.ago),
               about:FFaker::HipsterIpsum.paragraph,
               skills:FFaker::HipsterIpsum.words,
@@ -49,7 +50,7 @@ species_array = ["dog", "cat", "bird", "chickens", "goat"]
 
 50.times do
   Pet.create(
-              name:FFaker::Name.name,
+              name:FFaker::Name.first_name,
               species:species_array.sample,
               age:pet_life_stages_array.sample,
               about:FFaker::HipsterIpsum.paragraph,

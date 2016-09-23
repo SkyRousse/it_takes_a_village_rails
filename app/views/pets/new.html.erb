@@ -1,0 +1,33 @@
+<div class="row clearfix">
+  <div class="col-sm-12 form_for_foods">
+    <%= form_for @pet do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name%>
+      </div>
+      <div class="form-group">
+        <%= f.label :species %>
+        <%= f.text_field :species%>
+      </div>
+      <div class="form-group">
+        <%= f.label :age %>
+        <%= f.text_field :age%>
+      </div>
+      <div class="form-group">
+        <%= f.label :about %>
+        <%= f.text_field :about%>
+      </div>
+      <div class="form-group">
+        <%= f.label "Need Help With" %>
+        <%= f.select("pet_category_id", {:class => "category-select"}) do %>
+          <% @categories.each do |category| %>
+            <%= content_tag(:option, pet_category.name, value: pet_category.id) %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="form-group">
+        <%= f.submit :class => "btn btn-default" %>
+      </div>
+    <% end %>
+  </div>
+</div>
