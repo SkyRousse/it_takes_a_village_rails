@@ -9,7 +9,11 @@
 _A social web app that helps neighbors support each other. In order to find and receive help/support users can create an account and setup a profile. Once logged in users can create their own posts and view all of their neighbors posts._
 
 ### Schematic
-visit: http://ondras.zarovi.cz/sql/demo/, load it-takes-a-village
+* Find file named schematic in root directory of this project, copy all xml code
+* visit: http://ondras.zarovi.cz/sql/demo/
+* click Save/Load in upper right of page
+* under box with heading 'client' click Load XML and past in code
+
 
 
 | Requirements  | Complete  |
