@@ -29,6 +29,10 @@ gem 'jbuilder', '~> 2.5'
 gem "paperclip", "~> 5.0.0"
 gem 'devise'
 gem 'bootstrap-sass'
+gem 'chartkick', '~> 2.1', '>= 2.1.1'
+gem 'groupdate', '~> 3.0', '>= 3.0.2'
+gem 'ffaker', :git => 'https://github.com/ffaker/ffaker.git'
+gem 'will_paginate'
 
 
 # Use Capistrano for deployment
@@ -45,6 +49,9 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'factory_girl_rails'
   gem "letter_opener"
+  gem 'poltergeist'
+  gem 'database_cleaner'
+
 end
 
 group :development do
