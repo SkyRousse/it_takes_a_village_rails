@@ -33,12 +33,12 @@ end
 # PETS
 
 pet_category_list = [
-  "walks",
-  "feeding",
-  "training",
-  "play dates",
   "day care",
-  "overnight care"
+  "feeding",
+  "overnight care",
+  "play dates",
+  "training",
+  "walks"
 ]
 
 pet_category_list.each do |name|

@@ -4,13 +4,11 @@ class PetsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-    # @pets = Pet.search(params[:search])
-    if @category = PetCategory.search(params[:search]).first
-      @pets = Pet.where(pet_category_id: @category.id).order(sort_column + " " + sort_direction).paginate(:per_page => 10, :page => params[:page])
-    else
-      @pets = Pet.order(sort_column + " " + sort_direction).paginate(:per_page => 10, :page => params[:page])
-    end
-    # @pets = Pet.order(sort_column + " " + sort_direction)
+    # if @category = PetCategory.search(params[:search]).first
+    #   @pets = Pet.where(pet_category_id: @category.id).order(sort_column + " " + sort_direction).paginate(:per_page => 50, :page => params[:page])
+    # else
+      @pets = Pet.order(sort_column + " " + sort_direction).paginate(:per_page => 50, :page => params[:page])
+    # end
   end
 
   def show
@@ -24,7 +22,6 @@ class PetsController < ApplicationController
   def new
     @pet = Pet.new
     @categories = PetCategory.all
-    @types = Type.all
   end
 
   def create

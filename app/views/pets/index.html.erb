@@ -3,7 +3,7 @@
 </div>
 <div class="row">
   <div class="col-sm-offset-1 col-sm-10">
-    <%= form_tag(pets_path, method: 'get', remote: true, class: "pull-right") do %>
+    <%= form_tag(pets_path, method: 'get', remote: true, id: "pets_search", class: "pull-right") do %>
       <p>
         <%= text_field_tag :search, params[:search] %>
         <%= submit_tag('Search', :name => nil) %>

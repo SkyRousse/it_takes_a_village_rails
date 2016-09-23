@@ -17,9 +17,13 @@
 //= require_tree .
 //= require highcharts/highcharts-more
 //= require chartkick
-$(document).ready(function(event){
+$(function() {
   $("#foods-display th a").on("click", function() {
     $.getScript(this.href);
+    return false;
+  });
+  $("#pets_search input").keyup(function() {
+    $.get($("#pets_search").attr("action"), $("#pets_search").serialize(), null, "script");
     return false;
   });
 });
