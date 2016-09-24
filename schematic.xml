@@ -37,7 +37,7 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="402" y="88" name="pets">
+</datatypes><table x="405" y="12" name="pets">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -69,7 +69,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="186" y="244" name="users">
+<table x="168" y="298" name="users">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -120,7 +120,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="402" y="349" name="Homes">
+<table x="402" y="411" name="Homes">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -143,7 +143,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="399" y="569" name="Yards">
+<table x="399" y="667" name="Yards">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -166,7 +166,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="616" y="98" name="pet_categories">
+<table x="622" y="244" name="pet_categories">
 <row name="walks" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -192,7 +192,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="304" y="819" name="Posts">
+<table x="254" y="932" name="Posts">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -209,7 +209,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="39" y="43" name="Photos">
+<table x="11" y="45" name="Photos">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -220,7 +220,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="622" y="351" name="home categories">
+<table x="620" y="475" name="home categories">
 <row name="painting" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -240,7 +240,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="624" y="552" name="yard categories">
+<table x="622" y="678" name="yard categories">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -262,5 +262,25 @@
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
+</table>
+<table x="631" y="2" name="pet ages">
+<row name="young-pup" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="pup" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="young_adult" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="adult" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="old_and_wise" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+</key>
+<comment>for reference not to be an actual table</comment>
 </table>
 </sql>
