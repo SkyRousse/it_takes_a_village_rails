@@ -1,9 +1,10 @@
+
 FactoryGirl.define do
   factory :pet do
-    name "MyString"
+    name FFaker::Name.first_name
     species "MyString"
-    age 1
-    need_help_with "MyString"
-    about "MyString"
+    age { ["dog", "cat", "bird", "chickens", "goat"].sample }
+    category_id { [1 , 2, 3, 4, 5, 6].sample }
+    about FFaker::HipsterIpsum.paragraph
   end
 end

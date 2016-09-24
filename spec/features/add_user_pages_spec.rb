@@ -9,7 +9,7 @@ describe "the new user signup process" do
     fill_in "Last name", with: 'LastNameTest'
     fill_in "Email", with: 'test@example.com'
     fill_in "Dob", with: '1993-02-27'
-    fill_in "Sex", with: 'M'
+    fill_in "Gender", with: 'M'
     fill_in "Community", with: 'N PDX'
     fill_in "Street address", with: '1111 Fake Street'
     fill_in "Password", with: "mySecreteCode"
@@ -24,5 +24,5 @@ describe "the new user signup process" do
     click_button "Sign up"
     expect(page).to have_content "errors prohibited this user from being saved"
   end
-  
+
 end
