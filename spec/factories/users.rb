@@ -10,7 +10,7 @@ FactoryGirl.define do
     zip_code '97217'
     likes 'Things I like are...'
     street_address '1111 Fake Street'
-    sex 'Male'
+    gender 'Male'
     community 'I live in _blank community'
   end
   factory(:confirmed_user) do

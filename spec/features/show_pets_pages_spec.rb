@@ -1,9 +1,11 @@
-describe "the add a food path" do
+require 'rails_helper'
+
+describe "the add a pet path" do
   it "will allow a user to see all pets", js: true do
     user = FactoryGirl.create(:user)
-    FactoryGirl.create(:category)
+    FactoryGirl.create(:pet_category)
     login_as(user)
-    visit '/'
+    visit 'root_path'
     click_link 'Pets'
     select 'walks'
     click_on 'Create Pet'
@@ -11,9 +13,9 @@ describe "the add a food path" do
   end
   it "will allow a user to sort pets", js: true do
     user = FactoryGirl.create(:user)
-    FactoryGirl.create(:category)
+    FactoryGirl.create(:pet_category)
     login_as(user)
-    visit '/'
+    visit 'root_path'
     click_link 'Pets'
     select 'walks'
     click_on 'Create Pet'
