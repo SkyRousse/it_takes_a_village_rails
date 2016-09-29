@@ -15,8 +15,7 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
-//= require highcharts/highcharts-more
-//= require chartkick
+
 $(function() {
   $("#foods-display th a").on("click", function() {
     $.getScript(this.href);
