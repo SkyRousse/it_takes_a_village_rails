@@ -21,7 +21,7 @@
         <%= f.label "Need Help With" %>
         <%= f.select("pet_category_id", {:class => "category-select"}) do %>
           <% @categories.each do |category| %>
-            <%= content_tag(:option, pet_category.name, value: pet_category.id) %>
+            <%= content_tag(:option, category.name, value: category.id) %>
           <% end %>
         <% end %>
       </div>
