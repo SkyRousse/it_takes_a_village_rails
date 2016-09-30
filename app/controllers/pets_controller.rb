@@ -16,7 +16,12 @@ class PetsController < ApplicationController
   end
 
   def edit
+    @categories = PetCategory.all
     @pet = Pet.find(params[:id])
+    if is_owner === false
+      flash[:alert] = "Only pet owners can update pet info"
+      redirect_to pets_path
+    end
   end
 
   def new
@@ -37,6 +42,7 @@ class PetsController < ApplicationController
   end
 
   def update
+    @categories = PetCategory.all
     @pet = Pet.find(params[:id])
     if @pet.update(pet_params)
       flash[:notice] = "Pet updated"
@@ -49,11 +55,13 @@ class PetsController < ApplicationController
 
   def destroy
     @pet = Pet.find(params[:id])
-    if @pet.delete
+    if is_owner
+      @pet.delete
       flash[:notice] = "Pet deleted"
       redirect_to pets_path
     else
-      flash[:alert] = "Pet failed to delete"
+      flash[:alert] = "Pet not deleted only pet owners can remove pets"
+      redirect_to pets_path
     end
   end
   private
@@ -64,6 +72,10 @@ class PetsController < ApplicationController
 
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
+
+  def is_owner
+    current_user === @pet.user
   end
 
   def pet_params
