@@ -7,7 +7,6 @@ describe "the delete pet process" do
     test_pet = FactoryGirl.create(:pet, pet_category_id: 1, user_id: 1)
     login_as(user, :scope => :user)
     visit pet_path(test_pet)
-    save_and_open_page
     click_on "Delete"
     expect(page).to have_content "Pet deleted"
   end
@@ -18,7 +17,7 @@ describe "the delete pet process" do
     test_pet = FactoryGirl.create(:pet, pet_category_id: 1, user_id: 2)
     login_as(user1, :scope => :user)
     visit pet_path(test_pet)
-    click_on "Delete"
+    page.driver.submit :delete, "/pets/#{test_pet.id}", {}
     expect(page).to have_content "Pet not deleted only pet owners can remove pets"
   end
 end
