@@ -34,7 +34,10 @@ class PetsController < ApplicationController
     @pet = current_user.pets.new(pet_params)
     if @pet.save
       flash[:notice] = "Pet saved successfully"
-      render :new
+      respond_to do |format|
+        format.html { redirect_to pets_path }
+        format.js
+      end
     else
       flash[:alert] = "Pet failed to save"
       render :new
