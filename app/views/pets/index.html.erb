@@ -1,6 +1,8 @@
 <div class="row">
-  <h2 class="text-center">Pets</h1>
-  <%= link_to "Add New", new_pet_path, id: "new_pet_link", remote: true, class: "btn btn-success" %>
+  <div class="col-sm-offset-1 col-sm-10">
+    <h2 class="text-center">Pets</h1>
+    <%= link_to "Add New", new_pet_path, id: "new_pet_link", remote: true, class: "btn btn-success" %>
+  </div>
 </div>
 <div class="row" id="pets_index">
   <%= render "index" %>
