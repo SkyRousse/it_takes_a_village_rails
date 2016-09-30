@@ -1,5 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe PetCategory, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe PetCategory do
+  it {should have_many :pets}
+  it {should validate_presence_of :name}
 end

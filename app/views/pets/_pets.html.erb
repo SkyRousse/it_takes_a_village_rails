@@ -1,10 +1,12 @@
 <table class="table table-striped">
+  <th><%= sortable "name" %></th>
   <th><%= sortable "user", "Owner" %></th>
   <th><%= sortable "species" %></th>
   <th><%= sortable "age" %></th>
   <th><%= sortable "pet_category_id", "Need Help With" %></th>
   <% @pets.each do |pet| %>
     <tr>
+      <td><%= link_to pet.name.titleize, pet_path(pet) %></td>
       <td><%= pet.user.first_name.titleize %></td>
       <td><%= pet.species.titleize %></td>
       <td><%= pet.age.titleize %></td>
