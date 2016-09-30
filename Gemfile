@@ -34,7 +34,7 @@ gem "highcharts-rails"
 gem 'groupdate', '~> 3.0', '>= 3.0.2'
 gem 'ffaker', :git => 'https://github.com/ffaker/ffaker.git'
 gem 'will_paginate'
-
+gem 'geocoder'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

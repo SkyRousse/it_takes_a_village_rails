@@ -94,6 +94,7 @@ GEM
       factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
     ffi (1.9.14)
+    geocoder (1.4.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     groupdate (3.0.2)
@@ -262,6 +263,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   ffaker!
+  geocoder
   groupdate (~> 3.0, >= 3.0.2)
   highcharts-rails
   jbuilder (~> 2.5)
@@ -288,4 +290,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.12.5
+   1.13.1
