@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-30T11:28:32-07:00">2016-09-30T11:28:32-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-30T13:17:33-07:00">2016-09-30T13:17:33-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.25
+         2.33
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>49</b> files in total.
-    <b>420</b> relevant lines. 
-    <span class="green"><b>420</b> lines covered</span> and
+    <b>422</b> relevant lines. 
+    <span class="green"><b>422</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -93,11 +93,11 @@
       <tr>
         <td class="strong"><a href="#d2f854c1f2d6230bab82fc28520e06e9f67f4303" class="src_link" title="app/controllers/pets_controller.rb">app/controllers/pets_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>84</td>
-        <td>49</td>
-        <td>49</td>
+        <td>87</td>
+        <td>51</td>
+        <td>51</td>
         <td>0</td>
-        <td>4.3</td>
+        <td>4.5</td>
       </tr>
       
       <tr>
@@ -117,7 +117,7 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>30.3</td>
+        <td>33.7</td>
       </tr>
       
       <tr>
@@ -789,8 +789,8 @@
     <h3>app/controllers/pets_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>49</b> relevant lines. 
-      <span class="green"><b>49</b> lines covered</span> and
+      <b>51</b> relevant lines. 
+      <span class="green"><b>51</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -852,8 +852,8 @@
           <code class="ruby">    # else</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="10">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="10" data-linenumber="10">
+          <span class="hits">10</span>
           
           <code class="ruby">      @pets = Pet.order(sort_column + &quot; &quot; + sort_direction).paginate(:per_page =&gt; 50, :page =&gt; params[:page])</code>
         </li>
@@ -1017,91 +1017,91 @@
         <li class="covered" data-hits="1" data-linenumber="37">
           <span class="hits">1</span>
           
-          <code class="ruby">      render :new</code>
+          <code class="ruby">      respond_to do |format|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="covered" data-hits="2" data-linenumber="38">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">    else</code>
+          <code class="ruby">        format.html { redirect_to pets_path }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="39">
           <span class="hits">1</span>
           
-          <code class="ruby">      flash[:alert] = &quot;Pet failed to save&quot;</code>
+          <code class="ruby">        format.js</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="40">
           
-          <code class="ruby">      render :new</code>
+          
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
           
           
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      flash[:alert] = &quot;Pet failed to save&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      render :new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="47">
           <span class="hits">1</span>
           
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="45">
+        <li class="covered" data-hits="2" data-linenumber="48">
           <span class="hits">2</span>
           
           <code class="ruby">    @categories = PetCategory.all</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="46">
+        <li class="covered" data-hits="2" data-linenumber="49">
           <span class="hits">2</span>
           
           <code class="ruby">    @pet = Pet.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="47">
+        <li class="covered" data-hits="2" data-linenumber="50">
           <span class="hits">2</span>
           
           <code class="ruby">    if @pet.update(pet_params)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      flash[:notice] = &quot;Pet updated&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="49">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      redirect_to pet_path(@pet)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="50">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
         <li class="covered" data-hits="1" data-linenumber="51">
           <span class="hits">1</span>
           
-          <code class="ruby">      flash[:alert] = &quot;Pet update failed&quot;</code>
+          <code class="ruby">      flash[:notice] = &quot;Pet updated&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="52">
@@ -1113,67 +1113,67 @@
         <li class="never" data-hits="" data-linenumber="53">
           
           
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      flash[:alert] = &quot;Pet update failed&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      redirect_to pet_path(@pet)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="57">
+        <li class="covered" data-hits="2" data-linenumber="60">
           <span class="hits">2</span>
           
           <code class="ruby">    @pet = Pet.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="58">
+        <li class="covered" data-hits="2" data-linenumber="61">
           <span class="hits">2</span>
           
           <code class="ruby">    if is_owner</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="59">
+        <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
           <code class="ruby">      @pet.delete</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="60">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      flash[:notice] = &quot;Pet deleted&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="61">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      redirect_to pets_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="62">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
         <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
-          <code class="ruby">      flash[:alert] = &quot;Pet not deleted only pet owners can remove pets&quot;</code>
+          <code class="ruby">      flash[:notice] = &quot;Pet deleted&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="64">
@@ -1185,118 +1185,136 @@
         <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      flash[:alert] = &quot;Pet not deleted only pet owners can remove pets&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="67">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">      redirect_to pets_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="69">
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="70">
           <span class="hits">1</span>
           
-          <code class="ruby">  def sort_column</code>
-        </li>
-      
-        <li class="covered" data-hits="99" data-linenumber="70">
-          <span class="hits">99</span>
-          
-          <code class="ruby">    Pet.column_names.include?(params[:sort]) ? params[:sort] : &quot;species&quot;</code>
+          <code class="ruby">  private</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="72">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="73">
+        <li class="covered" data-hits="1" data-linenumber="72">
           <span class="hits">1</span>
           
-          <code class="ruby">  def sort_direction</code>
+          <code class="ruby">  def sort_column</code>
         </li>
       
-        <li class="covered" data-hits="27" data-linenumber="74">
-          <span class="hits">27</span>
+        <li class="covered" data-hits="110" data-linenumber="73">
+          <span class="hits">110</span>
           
-          <code class="ruby">    %w[asc desc].include?(params[:direction]) ? params[:direction] : &quot;asc&quot;</code>
+          <code class="ruby">    Pet.column_names.include?(params[:sort]) ? params[:sort] : &quot;species&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="76">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="77">
+        <li class="covered" data-hits="1" data-linenumber="76">
           <span class="hits">1</span>
           
-          <code class="ruby">  def is_owner</code>
+          <code class="ruby">  def sort_direction</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="78">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="30" data-linenumber="77">
+          <span class="hits">30</span>
           
-          <code class="ruby">    current_user === @pet.user</code>
+          <code class="ruby">    %w[asc desc].include?(params[:direction]) ? params[:direction] : &quot;asc&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="79">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="80">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="81">
+        <li class="covered" data-hits="1" data-linenumber="80">
           <span class="hits">1</span>
           
-          <code class="ruby">  def pet_params</code>
+          <code class="ruby">  def is_owner</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="82">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="81">
+          <span class="hits">5</span>
           
-          <code class="ruby">    params.require(:pet).permit(:pet_category_id, :name, :species, :age, :about, )</code>
+          <code class="ruby">    current_user === @pet.user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="83">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def pet_params</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="85">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    params.require(:pet).permit(:pet_category_id, :name, :species, :age, :about, )</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="84">
+        <li class="never" data-hits="" data-linenumber="87">
           
           
           <code class="ruby">end</code>
@@ -1404,26 +1422,26 @@
           <code class="ruby">  def sortable(column, title = nil)</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="3">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="50" data-linenumber="3">
+          <span class="hits">50</span>
           
           <code class="ruby">    title ||= column.titleize</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="4">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="50" data-linenumber="4">
+          <span class="hits">50</span>
           
           <code class="ruby">    css_class = column == sort_column ? &quot;current #{sort_direction}&quot; : nil</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="5">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="50" data-linenumber="5">
+          <span class="hits">50</span>
           
           <code class="ruby">    direction = column == sort_column &amp;&amp; sort_direction == &quot;asc&quot; ? &quot;desc&quot; : &quot;asc&quot;</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="6">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="50" data-linenumber="6">
+          <span class="hits">50</span>
           
           <code class="ruby">    link_to title, url_for(:sort =&gt; column, :direction =&gt; direction, :page =&gt; nil), {:class =&gt; css_class, :remote =&gt; true}</code>
         </li>
@@ -5193,7 +5211,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &quot;will allow a user to add a new pet&quot; do</code>
+          <code class="ruby">  it &quot;will allow a user to add a new pet&quot;, js: true do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">

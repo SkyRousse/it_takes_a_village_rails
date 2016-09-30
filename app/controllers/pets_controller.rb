@@ -30,6 +30,7 @@ class PetsController < ApplicationController
   end
 
   def create
+    @pets = Pet.order(sort_column + " " + sort_direction).paginate(:per_page => 50, :page => params[:page])
     @categories = PetCategory.all
     @pet = current_user.pets.new(pet_params)
     if @pet.save

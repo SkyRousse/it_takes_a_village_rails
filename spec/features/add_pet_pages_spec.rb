@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "the add a pet path" do
-  it "will allow a user to add a new pet" do
+  it "will allow a user to add a new pet", js: true do
     user = FactoryGirl.create(:user)
     FactoryGirl.create(:pet_category, name: "Walks")
     login_as(user)
