@@ -1,13 +1,11 @@
 <tr>
-  <% if pet.id == nil %>
-  <td><%= pet.name.titleize %></td>
-  <% else %>
+  <% if pet.id != nil %>
   <td><%= link_to pet.name.titleize, pet_path(pet) %></td>
-  <% end %>
   <td><%= pet.user.first_name.titleize %></td>
   <td><%= pet.species.titleize %></td>
   <td><%= pet.age.titleize %></td>
   <td><%= pet.pet_category.name.titleize %></td>
+  <% else %>
+  <td><%= pet.name.titleize %></td>
+  <% end %>
 </tr>
-
-<%= will_paginate @pets, :remote => true %>

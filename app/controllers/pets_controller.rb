@@ -7,7 +7,7 @@ class PetsController < ApplicationController
     # if @category = PetCategory.search(params[:search]).first
     #   @pets = Pet.where(pet_category_id: @category.id).order(sort_column + " " + sort_direction).paginate(:per_page => 50, :page => params[:page])
     # else
-    @pets = Pet.order(sort_column + " " + sort_direction).paginate(:per_page => 50, :page => params[:page])
+    @pets = Pet.order(sort_column + " " + sort_direction)
     # end
   end
 
@@ -27,10 +27,11 @@ class PetsController < ApplicationController
   def new
     @pet = Pet.new
     @categories = PetCategory.all
+    @pets = Pet.order(sort_column + " " + sort_direction)
   end
 
   def create
-    @pets = Pet.order(sort_column + " " + sort_direction).paginate(:per_page => 50, :page => params[:page])
+    @pets = Pet.order(sort_column + " " + sort_direction)
     @categories = PetCategory.all
     @pet = current_user.pets.new(pet_params)
     if @result = @pet.save

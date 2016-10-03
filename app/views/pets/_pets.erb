@@ -5,6 +5,6 @@
   <th><%= sortable "age" %></th>
   <th><%= sortable "pet_category_id", "Need Help With" %></th>
   <% @pets.each do |pet| %>
-    <%= render 'pet' %>
+    <%= render partial: 'pet', :locals => {:pet => pet}  %>
   <% end %>
 </table>
