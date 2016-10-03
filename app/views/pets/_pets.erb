@@ -1,0 +1,10 @@
+<table class="table table-striped" id="pets-table">
+  <th><%= sortable "name" %></th>
+  <th><%= sortable "user", "Owner" %></th>
+  <th><%= sortable "species" %></th>
+  <th><%= sortable "age" %></th>
+  <th><%= sortable "pet_category_id", "Need Help With" %></th>
+  <% @pets.each do |pet| %>
+    <%= render 'pet' %>
+  <% end %>
+</table>

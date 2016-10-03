@@ -5,5 +5,26 @@
   </div>
 </div>
 <div class="row" id="pets_index">
-  <%= render "index" %>
+  <div class="col-sm-offset-1 col-sm-10">
+    <%= form_tag(pets_path, method: 'get', remote: true, id: "pets_search", class: "pull-right") do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag('Search', :name => nil) %>
+      </p>
+      <%= hidden_field_tag :direction, params[:direction] %>
+      <%= hidden_field_tag :sort, params[:sort] %>
+    <% end %>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-offset-1 col-sm-10" id="pets-display">
+      <table class="table table-striped" id="pets-table">
+        <th><%= sortable "name" %></th>
+        <th><%= sortable "user", "Owner" %></th>
+        <th><%= sortable "species" %></th>
+        <th><%= sortable "age" %></th>
+        <th><%= sortable "pet_category_id", "Need Help With" %></th>
+        <%= render @pets %>
+      </table>
+    </div>
 </div>
