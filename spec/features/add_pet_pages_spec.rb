@@ -14,9 +14,10 @@ describe "the add a pet path" do
     fill_in "About", with: 'Best Dog Ever'
     select 'Walks'
     click_on 'Create Pet'
+    sleep 1
     expect(page).to have_content('Pet saved successfully')
   end
-  it "will give an error messsage if not all required fields are entered" do
+  it "will fail to save if not all required fields are entered" do
     user = FactoryGirl.create(:user)
     FactoryGirl.create(:pet_category, name: "Walks")
     login_as(user)
@@ -28,6 +29,6 @@ describe "the add a pet path" do
     fill_in "About", with: 'Best Dog Ever'
     select 'Walks'
     click_on 'Create Pet'
-    expect(page).to have_content('Pet failed to save')
+    expect(page).to have_content('Pet failed to save, please try again')
   end
 end

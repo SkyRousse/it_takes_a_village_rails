@@ -7,7 +7,7 @@ class PetsController < ApplicationController
     # if @category = PetCategory.search(params[:search]).first
     #   @pets = Pet.where(pet_category_id: @category.id).order(sort_column + " " + sort_direction).paginate(:per_page => 50, :page => params[:page])
     # else
-      @pets = Pet.order(sort_column + " " + sort_direction).paginate(:per_page => 50, :page => params[:page])
+    @pets = Pet.order(sort_column + " " + sort_direction).paginate(:per_page => 50, :page => params[:page])
     # end
   end
 
@@ -33,15 +33,18 @@ class PetsController < ApplicationController
     @pets = Pet.order(sort_column + " " + sort_direction).paginate(:per_page => 50, :page => params[:page])
     @categories = PetCategory.all
     @pet = current_user.pets.new(pet_params)
-    if @pet.save
+    if @result = @pet.save
       flash[:notice] = "Pet saved successfully"
       respond_to do |format|
         format.html { redirect_to pets_path }
         format.js
       end
     else
-      flash[:alert] = "Pet failed to save"
-      render :new
+      flash[:alert] = "Pet failed to save, please try again"
+      respond_to do |format|
+        format.html { redirect_to pets_path }
+        format.js
+      end
     end
   end
 

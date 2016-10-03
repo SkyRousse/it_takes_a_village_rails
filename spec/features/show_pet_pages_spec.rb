@@ -7,7 +7,7 @@ describe "the view pet details process" do
     test_pet = FactoryGirl.create(:pet, pet_category_id: 1, user_id: 1)
     login_as(user, :scope => :user)
     visit pets_path
-    click_on test_pet.name
+    click_link test_pet.name.titleize
     expect(page).to have_content test_pet.name
   end
 end

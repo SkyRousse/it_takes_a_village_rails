@@ -1,2 +1,8 @@
 $("form").remove();
 $("#new_pet_link").show();
+
+<% if @result %>
+  $("#flash-messages").html("<p class='alert alert-success'> <%= flash[:notice] %></p>");
+<% else %>
+  $("#flash-messages").html("<p class='alert alert-danger'> <%= flash[:alert] %></p>");
+<% end %>

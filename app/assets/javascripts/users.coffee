@@ -24,7 +24,7 @@ class GoogleMap
   addMarker: (location, title) ->
     # create marker and add it to the array of markers
     marker = new google.maps.Marker(
-      position: location,
+      position: Portland, OR,
       title: title,
       map: map
     )
@@ -39,7 +39,7 @@ class GoogleMap
     # add all markers
     _.each markerList, (marker) =>
       position = new google.maps.LatLng marker["lat"], marker["lon"]
-      title = "#{marker['full_address']}"
+      title = "#{marker['current_user.address']}"
       @addMarker position, title
 
   drawMarkers: (map) ->
@@ -62,17 +62,3 @@ class GoogleMap
     @hideMarkers()
     @removeListeners()
     markers = []
-
-app.google or= { classes: {} }
-app.google.classes.GoogleMap = GoogleMap
-
-
-$ ->
-  { GoogleMap } = app.google.classes
-
-  googleMap = new GoogleMap($('[data-map]:eq(0)').data('home'))
-  googleMap.placeMarkers($("[data-map]:eq(0)").data("markers-list"))
-
-  $(document).on 'click', '[data-tab]', ->
-    googleMap.deleteMarkers()
-    googleMap.placeMarkers($("[data-map]:eq($(@).index())").data("markers-list"))
