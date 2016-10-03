@@ -11,6 +11,10 @@ require 'ffaker'
 
 community_array = ["North", "North East", "North West", "South East", "South West", "East"]
 zip_code_array = ["97202", "97206", "97219", "97124", '97202', '97206', '97219']
+address_array = [
+  "111 5th Ave, Portland, OR 97204", "128 NE Russell St, Portland, OR 97212", "3120 N Williams Ave, Portland, OR 97227", "830 E Burnside St, Portland, OR 97214", "3433 NE 24th Ave, Portland, OR 97212", "
+  928 SE 9th Ave, Portland, OR 97214", "915 SE Hawthorne Blvd, Portland, OR 97214", "1504 NE Broadway St, Portland, OR 97232", "6400 N Interstate Ave, Portland, OR 97217"
+]
 
 10.times do
   User.create(
@@ -19,7 +23,7 @@ zip_code_array = ["97202", "97206", "97219", "97124", '97202', '97206', '97219']
               email:FFaker::Internet.email,
               password:123456,
               zip_code:zip_code_array.sample,
-              street_address:FFaker::AddressUS.street_address,
+              street_address:address_array.sample,
               dob:FFaker::Time.between(18.years.ago, 90.years.ago),
               about:FFaker::HipsterIpsum.paragraph,
               skills:FFaker::HipsterIpsum.words,
