@@ -44,6 +44,12 @@ th {
     font-family:"Glyphicons Halflings";
   }
 }
+
+.users-index {
+  .container {
+    width: 100% !important;
+  }
+}
 #village-map {
     height: 100%;
     position: absolute;
