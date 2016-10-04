@@ -8,56 +8,13 @@
 
 _A social web app that helps neighbors support each other. In order to find and receive help/support users can create an account and setup a profile. Once logged in users can create their own posts and view all of their neighbors posts._
 
-### Schematic
-* Find file named schematic in root directory of this project, copy all xml code
-* visit: http://ondras.zarovi.cz/sql/demo/
-* click Save/Load in upper right of page
-* under box with heading 'client' click Load XML and past in code
-
-
-
-| Requirements  | Complete  |
-| ------------- | ----:|
-| Does your code meet general coding standards (commits, spacing, naming, etc)? | -- |
-| Is there thorough test coverage - unit and integration? | -- |
-| Do your routes follow proper convention including a root route?
- | -- |
-| Is your application logic in the models (not the controller)?
- | -- |
-| Did you use success and error flash messages?
- | -- |
-| Are form and route helpers present and functioning?
- | -- |
-| Does the app use the asset pipeline for Bootstrap/CSS?
- | -- |
-| Does the application work?
- | -- |
-
-
 ### Configuration
-
-#### Development Gems
-* divise
-* bootstrap
-* paperclip
-* letter_opener
-*
-
-#### Testing Gems
-* shoulda-matchers
-* rspec-rails
-* pry
-* capybara
-* launchy
-* simplecov
-* factory_girl_rails
-* letter_opener
 
 1. Clone the repository from GitHub
 ```
 $ https://github.com/SkyRousse/it_takes_a_village_rails.git
 ```
-2. bundle
+2. Install Gems
 ```
 $ bundle install
 ```
@@ -80,6 +37,7 @@ $ rake db:seed
 ```
 $ rails server
 ```
+* Open browser & visit localhost:3000
 
 ## Known Bugs
 
@@ -96,9 +54,15 @@ https://github.com/plataformatec/devise/wiki/How-Tos
 _How to test with Capybara_
 https://github.com/plataformatec/devise/wiki/How-To:-Test-with-Capybara
 
+### Schematic (used as a dev. resource for identifying needed tables and relationships)
+* Find file named schematic in root directory of this project, copy all xml code
+* visit: http://ondras.zarovi.cz/sql/demo/
+* click Save/Load in upper right of page
+* under box with heading 'client' click Load XML and past in code
+
 ## Support and contact details
 
-_If you run into any issues or have questions, ideas, or concerns, please feel free to contact Noah:_
+_If you run into any issues or have questions, ideas, or concerns, please feel free to contact me:_
 
 * _Sky Rousse: <a href="mailto:skyrousse@gmail.com">skyrousse@gmail.com</a>_
 
