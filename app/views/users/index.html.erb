@@ -48,12 +48,17 @@
       }
     </script>
 
-<div style='width: 1200px;' class="row">
-  <div id="village-map" style='width: 1000px; height: 600px;' class="col-sm-10"></div>
-  <div class="col-sm-2">
 
+<div id="village-map">
+
+
+</div>
+
+<div id="sidebar">
+  <div class="sidebar-header"> <div class="tav-logo"> <a href="/" target="_blank"><img src="village.png"></a> </div> <h1 class="sidebar-header-title">Explore a Neighborhood</h1> <label for="neighborhood-dropdown"></label>
   </div>
 </div>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLgKNQvjmYhaUlQ4ftPVBEnuE91ntawAs&v=3&callback=initMap"
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLgKNQvjmYhaUlQ4ftPVBEnuE91ntawAs&v=3&libraries=visualization&callback=initMap"
 async defer></script>
