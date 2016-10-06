@@ -1,1 +1,32 @@
-<h1>It Takes a Village</h1>
+<% content_for(:title, "Home") %>
+<div class="hero">
+  <%= image_tag("/village-hero.png", class: "hero-image img-responsive") %>
+  <h1>It Takes a Village</h1>
+</div>
+<div class="container">
+  <div class="row text-center">
+    <div class="col-md-4">
+      <%= image_tag("/pin.png") %>
+      <h3>POST FREE OFFERS, NEEDS & EXCHANGES</h3>
+      <p>
+        Give, lend, and share your stuff, skills and neighborly spirit
+      </p>
+    </div>
+    <div class="col-md-4">
+      <%= image_tag("/heart-icon.png") %>
+      <h3>LEND A HAND TO A NEIGHBOR</h3>
+      <p>
+        See what others are offering or looking for, and help out when you can.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <%= image_tag("/connect-icon.png") %>
+      <h3>CONNECT NEIGHBORS WITH OTHERS</h3>
+      <p>
+        Can’t help, but know someone who can? Connect them (it’s great karma!)
+      </p>
+    </div>
+
+  </div>
+
+</div>

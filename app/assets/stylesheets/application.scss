@@ -28,6 +28,21 @@
     max-height: 50px;
 }
 
+.hero {
+  position: relative;
+  text-align: center;
+  
+  h1 {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    height: auto;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+
 th {
   a:hover {
     text-decoration: none;
@@ -54,6 +69,10 @@ th {
     height: 100%;
     position: absolute;
     width: 60%!important;
+}
+
+.home-index .container {
+  width: 100%
 }
 
 #sidebar {
